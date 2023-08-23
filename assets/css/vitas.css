@@ -1,0 +1,225 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-image: url("../vitasEaster/fireworks.gif");
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#imageContainer {
+  background-image: url("../vitasEaster/fireworks.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+img {
+  width: calc(100% / 3);
+  height: calc(100% / 3);
+  object-fit: contain;
+}
+
+#imageContainer > div {
+  flex: 1 0 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+img {
+  width: 33%;
+  height: 33%;
+}
+
+#imageContainer > div {
+  flex: 1 0 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#imageContainer img {
+  max-width: 100%;
+  height: auto;
+}
+
+#vitasOne img {
+  animation: spin1 4s infinite linear;
+}
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+    scale: 4;
+  }
+  50% {
+    transform: rotate(360deg);
+    scale: 0.4;
+  }
+  100% {
+    transform: rotate(720deg);
+    scale: 4;
+  }
+}
+
+#vitasTwo img {
+  animation: spin2 2s infinite linear;
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+    scale: 2;
+  }
+  50% {
+    transform: rotate(-720deg);
+    scale: 0.4;
+  }
+  100% {
+    transform: rotate(-1440deg);
+    scale: 2;
+  }
+}
+
+#vitasThree img {
+  animation: spin3 0.5s infinite linear;
+}
+
+@keyframes spin3 {
+  0% {
+    transform: rotate(-30deg);
+    scale: 3;
+  }
+  50% {
+    transform: rotate(30deg);
+    scale: 0.4;
+  }
+  100% {
+    transform: rotate(-30deg);
+    scale: 3;
+  }
+}
+
+#vitasFour img {
+  animation: spin4 0.1s infinite linear;
+}
+
+@keyframes spin4 {
+  0% {
+    transform: rotate(-5deg);
+    scale: 3;
+  }
+  50% {
+    transform: rotate(5deg);
+    scale: 3;
+  }
+  100% {
+    transform: rotate(-5deg);
+    scale: 2;
+  }
+}
+
+#vitasFive img {
+  animation: spin5 10s infinite linear;
+}
+
+@keyframes spin5 {
+  0% {
+    transform: rotate(0deg) scaleX(4);
+  }
+  50% {
+    transform: rotate(0deg) scaleY(4);
+  }
+  100% {
+    transform: rotate(0deg) scaleX(4);
+  }
+}
+
+#vitasSix img {
+  animation: spin6 4s infinite linear;
+}
+
+@keyframes spin6 {
+  0% {
+    transform: rotate(0deg) scale3d(5, 5, 5);
+  }
+  50% {
+    transform: rotate(0deg);
+    scale: 0.4;
+  }
+  100% {
+    transform: rotate(0deg);
+    scale: 2;
+  }
+}
+
+#vitasSeven img {
+  animation: spin7 4s infinite linear;
+}
+
+@keyframes spin7 {
+  0% {
+    transform: rotate(0deg);
+    scale: 2;
+  }
+  50% {
+    transform: rotate(180deg) scaleY(0.4) scaleX(3);
+    margin-left: 300px;
+  }
+  100% {
+    transform: rotate(360deg);
+    scale: 2;
+  }
+}
+
+#vitasEight img {
+  animation: spin8 8s infinite linear;
+}
+
+@keyframes spin8 {
+  0% {
+    transform: rotate(5deg);
+    scale: 1.2;
+  }
+  50% {
+    transform: rotate(-5deg);
+    scale: 1.6;
+  }
+  100% {
+    transform: rotate(5deg);
+    scale: 1.2;
+  }
+}
+
+#vitasNine img {
+  animation: spin9 4s infinite linear;
+}
+
+@keyframes spin9 {
+  0% {
+    transform: rotate(0deg) scaleY(8) scaleX(0.1);
+  }
+  50% {
+    transform: rotate(0deg) scaleY(0.1) scaleX(8);
+  }
+  100% {
+    transform: rotate(0deg) scaleY(8) scaleX(0.1);
+  }
+}

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Artists | Spotify</title>
+    <link rel="icon" type="image/ico" href="assets/imgs/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/circular-font.css" />
+    <!-- <link rel="stylesheet" href="assets/css/artistPage.css" /> -->
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/player.css" />
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="container" class="d-flex">
+      <nav
+        class="navbar navbar-expand-lg d-flex justify-content-start flex-column h-100 p-0 mt-2"
+      >
+        <div class="container-fluid align-items-start p-0 ps-2 h-100">
+          <div
+            class="d-flex flex-column h-100 flex-grow-1"
+            id="navbarSupportedContent"
+          >
+            <ul
+              class="navbar-nav mb-2 mb-lg-0 d-flex flex-column text-light rounded bg-dark ps-2"
+            >
+              <li id="homeB" class="nav-item">
+                <a
+                  class="nav-link active text-light"
+                  aria-current="page"
+                  href="index.html"
+                  ><i id="home-empty" class="bi bi-house-door fs-4 px-2"></i
+                  ><i class="bi bi-house-door-fill d-none fs-4 px-2"></i>
+                  <span>Home</span></a
+                >
+              </li>
+              <li id="searchB" class="nav-item">
+                <a class="nav-link text-light" href="#"
+                  ><i id="search-empty" class="bi bi-search fs-4 px-2"></i>
+                  <span>Cerca</span></a
+                >
+              </li>
+            </ul>
+            <ul
+              id="second-ul"
+              class="navbar-nav mt-2 mb-2 d-flex flex-column text-light rounded bg-dark ps-2"
+            >
+              <li
+                class="nav-item d-flex flex-column rounded-top bg-dark position-sticky top-0 shadow pb-1"
+              >
+                <div id="magic-div">
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <button id="library" class="nav-link text-light">
+                      <i class="bi bi-collection-fill fs-4 px-2"></i>
+                      <span>Libreria</span>
+                    </button>
+                    <div
+                      id="library-icons"
+                      class="text-end d-flex align-items-center"
+                    >
+                      <div class="nav-item dropdown">
+                        <a
+                          class="nav-link"
+                          href="#"
+                          role="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i class="bi bi-plus mx-2 text-light"></i>
+                        </a>
+                        <ul
+                          class="dropdown-menu dropdown-menu-end bg-dark plus-menu shadow"
+                        >
+                          <li>
+                            <a class="dropdown-item text-light" href="#"
+                              ><i class="bi bi-music-note-beamed"></i> Crea una
+                              nuova playlist</a
+                            >
+                          </li>
+                          <li>
+                            <a class="dropdown-item text-light" href="#"
+                              ><i class="bi bi-folder2"></i> Crea una cartella
+                              playlist</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <i class="bi bi-arrow-right-short mx-2"></i>
+                      <i class="bi bi-arrow-left-short mx-2 d-none"></i>
+                    </div>
+                  </div>
+                  <ul id="nav-links" class="d-flex p-2 mb-2">
+                    <li class="list-group-item me-2 rounded-pill">
+                      <a href="" class="text-decoration-none text-light"
+                        >Playlist</a
+                      >
+                    </li>
+                    <li class="list-group-item me-2 rounded-pill">
+                      <a href="" class="text-decoration-none text-light"
+                        >Artisti</a
+                      >
+                    </li>
+                    <li class="list-group-item me-2 rounded-pill">
+                      <a
+                        href="albumPage.html"
+                        class="text-decoration-none text-light"
+                        >Album</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div id="my-search" class="d-flex align-items-center">
+                  <div class="container p-0 ps-2">
+                    <form>
+                      <input type="checkbox" id="checkbox" />
+                      <div class="search-box">
+                        <input type="text" placeholder="Cerca nella libreria" />
+                        <label for="checkbox" class="icon">
+                          <i class="bi bi-search"></i>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="nav-item dropdown mx-2">
+                    <a
+                      class="nav-link dropdown-toggle text-light"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Recenti
+                    </a>
+                    <ul
+                      class="dropdown-menu dropdown-menu-end bg-dark shadow me-2"
+                    >
+                      <li>
+                        <a class="dropdown-item text-light" href="#">Autore</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item text-light" href="#"
+                          >Ordine alfabetico</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item text-light" href="#"
+                          >Aggiunti di recente</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item d-lg-none">
+                <a
+                  class="nav-link text-light"
+                  href="https://www.spotify.com/it/download/other/"
+                  ><i class="bi bi-spotify"></i> <span>Scarica l'app</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <div id="playlist-section">
+                  <ul id="lista-playlist" class="list-unstyled px-1 py-3"></ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="center" class="rounded mt-2 mx-2 text-light">
+        <header
+          class="d-flex justify-content-between p-3 position-sticky z-1 rounded-top"
+        >
+          <div id="main-buttons">
+            <button
+              class="btn btn-outline-secondary rounded-circle m-0 left text-bg-dark"
+            >
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button
+              class="btn btn-outline-secondary rounded-circle m-0 right text-bg-dark"
+            >
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+          <form class="d-flex d-none p-0" role="search">
+            <input
+              id="searchF"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn text-bg-dark" type="submit">Cerca</button>
+          </form>
+          <div class="nav-item dropdown">
+            <a
+              class="nav-link"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i
+                id="user"
+                class="bi bi-person btn text-bg-dark rounded-circle"
+              ></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end bg-dark">
+              <li><a class="dropdown-item text-light" href="#">Profilo</a></li>
+              <li>
+                <a class="dropdown-item text-light" href="#">Impostazioni</a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item text-light" href="#">Log out</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="m-0 p-0 d-flex" id="coverImageArtist">
+          <div class="align-self-end mb-4 ms-4">
+            <div id="verified" class="d-flex align-items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-patch-check-fill text-primary me-1"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"
+                />
+              </svg>
+              <p class="fs-6 text-light m-0 ps-2">Artista verificato</p>
+            </div>
+            <div id="artistName" class="my-4"></div>
+            <div id="monthlyListeners"></div>
+          </div>
+        </div>
+        <main class="bg-dark">
+          <div class="container">
+            <div class="play-follow d-flex align-items-center pt-4">
+              <div id="circle-play" class="me-4">
+                <img
+                  src="./assets/imgs/Spotify-Play-Button-Black.png"
+                  alt="play"
+                  style="height: 75px"
+                />
+              </div>
+              <div id="follow" class="me-4">
+                <button type="button" class="btn btn-outline-light fw-bold">
+                  FOLLOW
+                </button>
+              </div>
+              <div class="dropdown me-4">
+                <button
+                  type="button"
+                  class="btn"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-three-dots text-light fs-1"></i>
+                </button>
+                <ul class="dropdown-menu bg-black" style="width: 180px">
+                  <li class="ms-2 text-light">Segui</li>
+                  <li class="ms-2 text-light">Vai a radio dell'artista</li>
+                  <li class="ms-2 text-light">Condividi</li>
+                  <li class="ms-2 text-light">Segnala</li>
+                </ul>
+              </div>
+            </div>
+            <div id="container-songs" class="container p-3">
+              <div id="songs-row gy-5" class="row">
+                <div class="col col-12 col-lg-8 my-4 pe-3" id="songs-column">
+                  <h5 class="fw-bold text-light">Popolari</h5>
+                </div>
+                <div
+                  class="col col-12 col-lg-4 text-light my-4"
+                  id="liked-songs"
+                >
+                  <h5 class="fw-bold">Brani che ti piacciono</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- fine container centrale -->
+        </main>
+        <div id="main-footer" class="container-fluid mt-3 bg-dark pt-4">
+          <div class="row pb-4 mx-2 border-bottom border-secondary">
+            <div class="col ms-0 ps-0 col-8">
+              <div class="row justify-content-between">
+                <div class="col d-flex flex-column">
+                  <a href="#" class="text-decoration-none text-light"
+                    ><strong>Azienda</strong></a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Chi siamo</a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Opportunità di lavoro</a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >For the Record</a
+                  >
+                </div>
+                <div class="col d-flex flex-column">
+                  <a href="#" class="text-decoration-none text-light"
+                    ><strong>Community</strong></a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Per artisti</a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Sviluppatori</a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Pubblicità</a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Investitori</a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Venditori</a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Spotify for Work</a
+                  >
+                </div>
+                <div class="col d-flex flex-column">
+                  <a href="#" class="text-decoration-none text-light"
+                    ><strong>Link utili</strong></a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Assistenza</a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >App per cellulare gratuita</a
+                  >
+                  <a href="#" class="text-decoration-none text-secondary"
+                    >Diritti del consumatore</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col text-end me-0 pe-0">
+              <i
+                class="bi bi-instagram text-bg-dark rounded-circle p-2 mx-2"
+              ></i>
+              <i class="bi bi-twitter text-bg-dark rounded-circle p-2 mx-2"></i>
+              <i
+                class="bi bi-facebook text-bg-dark rounded-circle p-2 mx-2"
+              ></i>
+            </div>
+          </div>
+          <div class="row py-4 mx-2 justify-content-between">
+            <div class="col d-flex p-0 fw-light">
+              <a href="#" class="text-decoration-none text-secondary pe-3"
+                >Informazioni legali</a
+              >
+              <a href="#" class="text-decoration-none text-secondary pe-3"
+                >Centro sulla privacy</a
+              >
+              <a href="#" class="text-decoration-none text-secondary pe-3"
+                >Informativa sulla privacy</a
+              >
+              <a href="#" class="text-decoration-none text-secondary pe-3"
+                >Impostazioni cookie</a
+              >
+              <a href="#" class="text-decoration-none text-secondary pe-3"
+                >Info annunci</a
+              >
+              <a href="#" class="text-decoration-none text-secondary pe-3"
+                >Accessibilità</a
+              >
+            </div>
+            <div
+              class="col col-2 d-flex justify-content-end text-secondary fw-light"
+            >
+              ©&nbsp;<span id="year"></span>&nbsp;Spotify AB
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside
+        id="right"
+        class="d-flex flex-column m-2 ms-0 d-none d-xl-block bg-dark p-2 rounded"
+      >
+        <div id="aside-title" class="d-flex justify-content-between mb-3">
+          <h5>Attività degli amici</h5>
+          <div>
+            <i class="bi bi-person-plus pe-1"></i>
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+        <div class="friend mb-3 d-flex">
+          <img
+            src="assets/imgs/34340939_1722754957801585_815285007252717568_n (1).jpg"
+            alt="Simone"
+          />
+          <div class="d-flex flex-column ps-1 center">
+            <p class="m-0"><strong>Simone Potenza</strong></p>
+            <p class="m-0">Forte Forte Forte • Raffella Carrà</p>
+            <p class="m-0">
+              <i><i class="bi bi-music-note-beamed"></i></i> A far l'amore
+              comuncia tu
+            </p>
+          </div>
+          <div class="time">4 days</div>
+        </div>
+        <div class="friend mb-3 d-flex">
+          <img class="antonio" src="assets/imgs/antonio.png" alt="Antonio" />
+          <div class="d-flex flex-column ps-1 center">
+            <p class="m-0"><strong>Antonio Girardi</strong></p>
+            <p class="m-0">Fast X • Theme song</p>
+            <p class="m-0">
+              <i><i class="bi bi-music-note-beamed"></i></i> My City
+            </p>
+          </div>
+          <div class="time">4 days</div>
+        </div>
+        <div class="friend mb-3 d-flex">
+          <img src="assets/imgs/VitasAlbum" alt="Nino" />
+          <div class="d-flex flex-column ps-1 center">
+            <p class="m-0"><strong>Nino Traverso</strong></p>
+            <p class="m-0">
+              <a href="./vitas.html" class="text-decoration-none text-light"
+                >7th element • Vitas</a
+              >
+            </p>
+            <p class="m-0">
+              <i><i class="bi bi-music-note-beamed"></i></i> 7th element
+            </p>
+          </div>
+          <div class="time">4 days</div>
+        </div>
+        <div class="friend mb-3 d-flex">
+          <img src="assets/imgs/IMG-Claudio.jpg" alt="Claudio" />
+          <div class="d-flex flex-column ps-1 center">
+            <p class="m-0"><strong>Claudio Galano</strong></p>
+            <p class="m-0">Timidamente io • Ruggero dei Timidi</p>
+            <p class="m-0">
+              <i><i class="bi bi-music-note-beamed"></i></i> Timidamente io
+            </p>
+          </div>
+          <div class="time">4 days</div>
+        </div>
+        <div class="friend mb-3 d-flex">
+          <img src="assets/imgs/Stefano.jpg" alt="Stefano" />
+          <div class="d-flex flex-column ps-1 center">
+            <p class="m-0"><strong>Stefano Casasola</strong></p>
+            <p class="m-0">Best of • Gigi Dag</p>
+            <p class="m-0">
+              <i><i class="bi bi-music-note-beamed"></i></i> L'amour toujours
+            </p>
+          </div>
+          <div class="time">4 days</div>
+        </div>
+        <div class="friend mb-3 d-flex">
+          <img
+            class="antonio"
+            src="https://d37va2rovhwkkr.cloudfront.net/preview_images/news/420_0.jpg"
+            alt="Mario"
+          />
+          <div class="d-flex flex-column ps-1 center">
+            <p class="m-0"><strong>Mario</strong></p>
+            <p class="m-0">Dialogo tra un impegnato e... • Giorgio Gaber</p>
+            <p class="m-0">
+              <i><i class="bi bi-music-note-beamed"></i></i> La presa del potere
+            </p>
+          </div>
+          <div class="time">4 days</div>
+        </div>
+      </aside>
+    </div>
+    <footer class="text-light position-fixed bottom-0 w-100">
+      <div class="container-fluid">
+        <div class="row d-md-flex justify-content-between">
+          <div
+            class="col col-sm-12 d-md-none my-2 d-flex align-items-center justify-content-between"
+          >
+            <div class="d-flex align-items-center justify-content-center">
+              <div class="imageContainer mx-2 rounded-circle rounded-sm-0">
+                <img
+                  id="playerImageSmall"
+                  src="./assets/imgs/IMG-Claudio.jpg"
+                  alt="image"
+                />
+              </div>
+              <p id="songNameForPlayerBig" class="mx-2 fs-5 text mb-0">
+                Song Name
+              </p>
+            </div>
+            <div class="d-flex align-items-center justify-content-center">
+              <a href="#" class="text-decoration-none text-light"
+                ><i class="bi bi-speaker px-2"></i
+              ></a>
+              <div><i class="bi bi-heart px-2" id="heartIcon"></i></div>
+              <div>
+                <i class="bi bi-play-fill px-2" id="playPauseSmall"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-none d-md-flex align-items-center">
+            <div class="imageContainer mx-2 rounded-circle rounded-sm-0">
+              <img
+                id="playerImageBig"
+                src="./assets/imgs/IMG-Claudio.jpg"
+                alt="image"
+              />
+            </div>
+
+            <div class="d-flex flex-column align-self-center pt-3">
+              <p id="songNameForPlayerSmall" class="mx-2 fs-5 text mb-0">
+                Song Name
+              </p>
+              <p
+                id="artistNameForPlayer"
+                class="mx-2 d-none d-md-block fs-6 text mt-0 fw-light"
+              >
+                Artist Name
+              </p>
+            </div>
+            <div><i class="bi bi-heart mx-2" id="heartIconBig"></i></div>
+          </div>
+          <div
+            class="col col-md-4 d-none d-md-block d-flex flex-column align-self-center"
+          >
+            <div class="d-flex justify-content-center align-items-center pt-2">
+              <a href="#" id="colorToggleShuffle">
+                <i class="bi bi-shuffle px-2" id="shuffleIcon"></i>
+              </a>
+              <i class="bi bi-skip-backward px-3"></i>
+              <!-- TASTO PLAY -->
+              <i
+                role="button"
+                aria-label="Play"
+                data-playing="false"
+                id="playPause"
+                class="bi bi-play-circle-fill mx-2 fs-2"
+              ></i>
+              <i class="bi bi-skip-forward px-3"></i>
+              <a href="#" id="colorToggleRepeat">
+                <i class="bi bi-repeat px-2" id="repeatIcon"></i>
+              </a>
+            </div>
+            <!-- PROGRESS BAR -->
+            <div class="d-flex align-items-center justify-content-between">
+              <p class="m-0" id="songStartPoint">0:00</p>
+              <div class="player-progress d-flex">
+                <div class="player-progress-filled"></div>
+              </div>
+              <p class="m-0" id="songEndPoint">0:00</p>
+            </div>
+          </div>
+          <!-- VOLUME-->
+          <div
+            class="col col-4 d-none d-md-flex flex-row align-items-center justify-content-end"
+          >
+            <a href="#" class="text-decoration-none text-light"
+              ><i class="bi bi-mic px-2"></i
+            ></a>
+            <a href="#" class="text-decoration-none text-light"
+              ><i class="bi bi-menu-button-wide px-2"></i
+            ></a>
+            <a href="#" class="text-decoration-none text-light"
+              ><i class="bi bi-speaker px-2"></i
+            ></a>
+            <a href="#" class="text-decoration-none text-light"
+              ><i class="bi bi-volume-down px-2"></i
+            ></a>
+            <input
+              type="range"
+              id="volume"
+              class="styled-slider slider-progress"
+              min="0"
+              max="100"
+              value="20"
+              step="1"
+            />
+            <a href="#" class="text-decoration-none text-light"
+              ><i class="bi bi-arrows-angle-expand px-2"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <audio crossorigin="anonymous">
+        <source
+          id="audioSource"
+          src="https://cdns-preview-5.dzcdn.net/stream/c-5a9b2da5acb610170196eb5872c7d2ab-17.mp3"
+          type="audio/mpeg"
+        />
+        >
+      </audio>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/artistPage.js"></script>
+    <!-- <script src="scripts/index.js"></script> -->
+    <!-- <script src="scripts/player.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    font-family: circular;
+  }
+  
+  #main-buttons button.left {
+    padding: 0.3em 0.6em 0.1em 0.5em;
+  }
+  #main-buttons button.right {
+    padding: 0.3em 0.5em 0.1em 0.6em;
+  }
+  
+  #user {
+    padding: 0.2em 0.5em;
+  }
+  
+  nav {
+    width: 20%;
+  }
+  
+  #center {
+    width: 60%;
+  }
+  
+  aside {
+    background-color: black;
+    color: white;
+  }
+  
+  #aside-title i {
+    cursor: pointer;
+  }
+
+  aside {
+    width: 20%;
+  }
+  
+  .friend {
+    font-size: 0.55em;
+  }
+  .friend img {
+    width: 10%;
+    height: 50%;
+    border-radius: 50%;
+  }
+  
+  .center {
+    width: 100%;
+  }
+  
+  .time {
+    width: 15%;
+  }
+  
+  
+  #library-icons i {
+    cursor: pointer;
+  }
+  
+  #nav-links li {
+    font-size: 0.9em;
+    padding: 0.2em 0.7em;
+    background-color: darkgray;
+  }/*# sourceMappingURL=index.css.map */
+
+  @media screen and (max-width: 1199px) {
+    #center {
+      width: 80%;
+    }
+  }
+
+  .artistTitle {
+    font-size: 3.5rem;
+  }
+
+  #center {
+    background: linear-gradient(180deg, rgb(6, 130, 17) 0%, rgb(30, 31, 30) 15%, rgb(14, 13, 13) 100%);
+  }
